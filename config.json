@@ -1,0 +1,15 @@
+{
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 8001
+  },
+  "servers": [
+    {
+      "name": "lazy_reviewer",
+      "enabled": true,
+      "command": "uv",
+      "args": ["run", "--package", "pr-reviewer", "pr-review-mcp"],
+      "env": {}
+    }
+  ]
+}
