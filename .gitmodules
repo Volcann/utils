@@ -1,0 +1,3 @@
+[submodule "lazy-reviewer"]
+	path = lazy-reviewer
+	url = https://github.com/Volcann/lazy-reviewer.git
