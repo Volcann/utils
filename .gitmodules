@@ -1,3 +1,6 @@
 [submodule "lazy-reviewer"]
 	path = lazy-reviewer
 	url = https://github.com/Volcann/lazy-reviewer.git
+[submodule "environment"]
+	path = environment
+	url = https://github.com/Volcann/environment.git
