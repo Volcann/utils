@@ -10,6 +10,13 @@
       "command": "uv",
       "args": ["run", "--package", "pr-reviewer", "pr-review-mcp"],
       "env": {}
+    },
+    {
+      "name": "environment",
+      "enabled": true,
+      "command": "uv",
+      "args": ["run", "--package", "environment", "environment-mcp"],
+      "env": {}
     }
   ]
 }
