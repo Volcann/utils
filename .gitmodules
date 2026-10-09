@@ -4,3 +4,9 @@
 [submodule "environment"]
 	path = environment
 	url = https://github.com/Volcann/environment.git
+[submodule "ghToolkit"]
+	path = ghToolkit
+	url = https://github.com/Volcann/ghToolkit.git
+[submodule "workedTask"]
+	path = workedTask
+	url = https://github.com/Volcann/workedTask.git
