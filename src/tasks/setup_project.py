@@ -1,8 +1,10 @@
 import io
 import sys
-from app import app
+
 from environment.folder_setup import launch_workspace
 from environment.listener import start_listeners
+
+from app import app
 
 
 @app.task(bind=True, name="tools.setup_project")

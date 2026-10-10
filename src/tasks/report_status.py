@@ -1,10 +1,11 @@
 import io
 import sys
+
 from app import app
 
 
 @app.task(bind=True, name="tools.report_status")
-def report_status_task(self, date: str = None) -> str:
+def report_status_task(self, date: str | None = None) -> str:
     self.update_state(state="PROGRESS", meta={"msg": "Generating status report..."})
     from cli.commands import main as status_main
 

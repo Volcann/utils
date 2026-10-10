@@ -1,7 +1,8 @@
-import pytest
 from unittest.mock import patch
+
 from tasks.list_tools import list_tools_task
 from tasks.report_status import report_status_task
+
 
 def test_list_tools_task():
     tools = list_tools_task()
@@ -10,6 +11,7 @@ def test_list_tools_task():
     assert "setup_project" in names
     assert "review_pr" in names
     assert "report_status" in names
+
 
 @patch("cli.commands.main")
 def test_report_status_task(mock_main):
