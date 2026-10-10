@@ -20,21 +20,6 @@ cleanup() {
 
 trap cleanup SIGINT SIGTERM
 
-echo "Starting MCP Gateway..."
-cd "$UTILS_DIR"
-uv run --package mcp-gateway gateway &
-pids+=($!)
-echo "  Gateway PID: ${pids[-1]}"
-
-echo "  Waiting for gateway on :8001..."
-for i in $(seq 1 20); do
-    if curl -sf http://127.0.0.1:8001 > /dev/null 2>&1; then
-        echo "  Gateway ready."
-        break
-    fi
-    sleep 0.5
-done
-
 echo "Starting Django..."
 cd "$DJANGO_DIR"
 "$DJANGO_VENV" manage.py runserver 0.0.0.0:8000 &
@@ -43,7 +28,6 @@ echo "  Django PID: ${pids[-1]}"
 
 echo ""
 echo "  Django  → http://localhost:8000"
-echo "  Gateway → http://localhost:8001"
 echo ""
 echo "  Press Ctrl+C to stop all."
 echo ""

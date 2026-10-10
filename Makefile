@@ -15,7 +15,6 @@ curl_setup:
 	@make -C environment curl_setup PROJECT=$(PROJECT)
 
 lint:
-	uv run --package mcp-gateway ruff check mcp-gateway/src || true
 	uv run --package pr-reviewer ruff check lazy-reviewer/src
 	make -C workedTask lint
 
